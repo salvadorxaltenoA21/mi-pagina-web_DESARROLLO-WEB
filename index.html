@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagen/jpg" href="pizza.jpg">
+    <title>GuiaMuss - Página de Inicio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo -->
+</head>
+<body>
+    <header>
+        <h1>GuiMuss</h1>
+        <div class="login-button">
+            <a href="login.html">Ingresar cuenta</a>
+        </div>
+    </header>
+
+    <main>
+        <body>
+           
+        
+            <div class="search-container">
+                <input type="text" class="search-box" id="search-box" placeholder="Buscar museo...">
+                <select class="category-select" id="category-select">
+                    <option value="all">Todos</option>
+                    <option value="arte">Arte</option>
+                    <option value="ciencia">Ciencia</option>
+                    <option value="didacticos">Didácticos</option>
+                    <option value="historia">Historia</option>
+                    <option value="naturaleza">Naturaleza</option>
+                </select>
+            </div>
+        
+            <!-- Tarjetas de museos -->
+            <div class="museum-cards" id="museum-cards">
+                <!-- Ejemplo de museo con imagen, categoría, nombre y detalles desplegables -->
+                <!-- Museo 1: Museo Frida Kahlo -->
+                <div class="card" data-category="arte">
+                    <img src="1.jpg" alt="Museo Frida Kahlo">
+                    <h3>Museo Frida Kahlo</h3>
+                    <p>Casa azul, lugar histórico de la vida de Frida Kahlo</p>
+                    <div class="toggle-button" onclick="toggleDetails(this)">Ver más</div>
+                    <div class="details">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.049506719369!2d-99.16255254917657!3d19.35716734692312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff57f7e9c717%3A0xa6cf07968174152b!2sMuseo%20Frida%20Kahlo!5e0!3m2!1ses-419!2ses!4v1635368268365!5m2!1ses-419!2ses" title="Museo Frida Kahlo"></iframe>
+                        <div class="info">
+                            <p><strong>Horario:</strong> 10:00 - 17:45</p>
+                            <p><strong>Costos:</strong> Entrada general: $250 MXN, Entrada reducida: $90 MXN</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Museo 2: Museo Nacional de Antropología -->
+                <div class="card" data-category="historia">
+                    <img src="2.jpg" alt="Museo Nacional de Antropología">
+                    <h3>Museo Nacional de Antropología</h3>
+                    <p>Exposición de la historia y cultura mexicana</p>
+                    <div class="toggle-button" onclick="toggleDetails(this)">Ver más</div>
+                    <div class="details">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.6768386241107!2d-99.18386964917693!3d19.42798934159368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff513aa9e7ef%3A0x8ff4cce41f3b226d!2sMuseo%20Nacional%20de%20Antropolog%C3%ADa!5e0!3m2!1ses-419!2ses!4v1635368352707!5m2!1ses-419!2ses" title="Museo Nacional de Antropología"></iframe>
+                        <div class="info">
+                            <p><strong>Horario:</strong> 9:00 - 20:00</p>
+                            <p><strong>Costos:</strong> Entrada general: $85 MXN, Entrada reducida: $35 MXN</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Museo 3: Museo Tamayo -->
+                <div class="card" data-category="arte">
+                    <img src="3.jpeg" alt="Museo Tamayo">
+                    <h3>Museo Tamayo</h3>
+                    <p>Arte moderno y contemporáneo</p>
+                    <div class="toggle-button" onclick="toggleDetails(this)">Ver más</div>
+                    <div class="details">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.088981481406!2d-99.18141114917688!3d19.35445664357436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff3fa8bbada3%3A0x17e25374219d6c92!2sMuseo%20Tamayo!5e0!3m2!1ses-419!2ses!4v1635368441819!5m2!1ses-419!2ses" title="Museo Tamayo"></iframe>
+                        <div class="info">
+                            <p><strong>Horario:</strong> 10:00 - 18:00</p>
+                            <p><strong>Costos:</strong> Entrada general: $70 MXN, Entrada reducida: $30 MXN</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="card" data-category="arte">
+                    <img src="4.jpeg" alt="Museo de Arte Moderno">
+                    <h3>Museo de Arte Moderno</h3>
+                    <p>Exposición de arte moderno y contemporáneo</p>
+                    <div class="toggle-button" onclick="toggleDetails(this)">Ver más</div>
+                    <div class="details">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.0977594102626!2d-99.18739354917695!3d19.35693834330992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff17ef0830b9%3A0x2799f4e3ac6d2120!2sMuseo%20de%20Arte%20Moderno!5e0!3m2!1ses-419!2ses!4v1635368593597!5m2!1ses-419!2ses" title="Museo de Arte Moderno"></iframe>
+                        <div class="info">
+                            <p><strong>Horario:</strong> 10:00 - 17:00</p>
+                            <p><strong>Costos:</strong> Entrada general: $50 MXN, Entrada reducida: $30 MXN</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Museo 5: Museo Nacional de Arte -->
+                <div class="card" data-category="arte">
+                    <img src="5.jpg" alt="Museo Nacional de Arte">
+                    <h3>Museo Nacional de Arte</h3>
+                    <p>Exhibiciones de arte colonial, moderno y contemporáneo</p>
+                    <div class="toggle-button" onclick="toggleDetails(this)">Ver más</div>
+                    <div class="details">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.6782240518744!2d-99.13755504917682!3d19.429387841063362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff441fc481a1%3A0x17d9b5679fd0807b!2sMuseo%20Nacional%20de%20Arte!5e0!3m2!1ses-419!2ses!4v1635368688691!5m2!1ses-419!2ses" title="Museo Nacional de Arte"></iframe>
+                        <div class="info">
+                            <p><strong>Horario:</strong> 10:00 - 18:00</p>
+                            <p><strong>Costos:</strong> Entrada general: $70 MXN, Entrada reducida: $35 MXN</p>
+                        </div>
+                    </div>
+                </div>
+        
+        
+                    <!-- Museo 7: Museo Universitario Arte Contemporáneo -->
+            <div class="card" data-category="arte">
+                <img src="6.jpg" alt="Museo Universitario Arte Contemporáneo">
+                <h3>Museo Universitario Arte Contemporáneo</h3>
+                <p>Un museo con una extensa colección de arte contemporáneo.</p>
+                <div class="toggle-button" onclick="toggleDetails(this)">Ver más</div>
+                <div class="details">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.095527695053!2d-99.19333014917691!3d19.33868824237876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fc1d8d1ab2d3%3A0xb2a44383f5b72f6d!2sMuseo%20Universitario%20Arte%20Contempor%C3%A1neo!5e0!3m2!1ses-419!2ses!4v1635368690498!5m2!1ses-419!2ses" title="Museo Universitario Arte Contemporáneo"></iframe>
+                    <div class="info">
+                        <p><strong>Horario:</strong> 11:00 - 17:00</p>
+                        <p><strong>Costos:</strong> Entrada general: $50 MXN</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Museo 8: Museo del Templo Mayor -->
+            <div class="card" data-category="historia">
+                <img src="7.jpg" alt="Museo del Templo Mayor">
+                <h3>Museo del Templo Mayor</h3>
+                <p>Descubre la historia del Templo Mayor y el antiguo México-Tenochtitlán.</p>
+                <div class="toggle-button" onclick="toggleDetails(this)">Ver más</div>
+                <div class="details">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.601244949699!2d-99.14450954917679!3d19.43279453354657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff2668e3c487%3A0x5a2678cf8e477ee!2sMuseo%20Templo%20Mayor!5e0!3m2!1ses-419!2ses!4v1635368714899!5m2!1ses-419!2ses" title="Museo del Templo Mayor"></iframe>
+                    <div class="info">
+                        <p><strong>Horario:</strong> 9:00 - 20:00</p>
+                        <p><strong>Costos:</strong> Entrada general: $85 MXN, Entrada reducida: $30 MXN</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Museo 9: Museo de Historia Natural -->
+            <div class="card" data-category="ciencia">
+                <img src="8.jpg" alt="Museo de Historia Natural">
+                <h3>Museo de Historia Natural</h3>
+                <p>Explora las maravillas de la naturaleza a través de sus exposiciones.</p>
+                <div class="toggle-button" onclick="toggleDetails(this)">Ver más</div>
+                <div class="details">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.325598445794!2d-99.18656224917676!3d19.419139142211546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff321c5bbfd9%3A0x7d53b2a38b8f58f2!2sMuseo%20de%20Historia%20Natural!5e0!3m2!1ses-419!2ses!4v1635368731692!5m2!1ses-419!2ses" title="Museo de Historia Natural"></iframe>
+                    <div class="info">
+                        <p><strong>Horario:</strong> 9:00 - 18:00</p>
+                        <p><strong>Costos:</strong> Entrada general: $40 MXN, Entrada reducida: $20 MXN</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Museo 10: Museo de la Ciudad de México -->
+            <div class="card" data-category="historia">
+                <img src="9.jpg" alt="Museo de la Ciudad de México">
+                <h3>Museo de la Ciudad de México</h3>
+                <p>Un vistazo al pasado histórico de la Ciudad de México.</p>
+                <div class="toggle-button" onclick="toggleDetails(this)">Ver más</div>
+                <div class="details">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.0819270136877!2d-99.14524224917689!3d19.4294084315412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff1d8fc32011%3A0x6b8039be9d319fe6!2sMuseo%20de%20la%20Ciudad%20de%20M%C3%A9xico!5e0!3m2!1ses-419!2ses!4v1635368761083!5m2!1ses-419!2ses" title="Museo de la Ciudad de México"></iframe>
+                    <div class="info">
+                        <p><strong>Horario:</strong> 10:00 - 17:00</p>
+                        <p><strong>Costos:</strong> Entrada general: $50 MXN</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Museo 11: Museo de Arte Popular -->
+            <div class="card" data-category="arte">
+                <img src="10.jpg" alt="Museo de Arte Popular">
+                <h3>Museo de Arte Popular</h3>
+                <p>El arte popular mexicano en su máxima expresión.</p>
+                <div class="toggle-button" onclick="toggleDetails(this)">Ver más</div>
+                <div class="details">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.0885692822047!2d-99.15972834917694!3d19.435545080398717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ffb57c319983%3A0x71e8762b8f2ef8b4!2sMuseo%20de%20Arte%20Popular!5e0!3m2!1ses-419!2ses!4v1635368778184!5m2!1ses-419!2ses" title="Museo de Arte Popular"></iframe>
+                    <div class="info">
+                        <p><strong>Horario:</strong> 10:00 - 17:00</p>
+                        <p><strong>Costos:</strong> Entrada general: $60 MXN</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Museo 12: Museo de Ciencias Universum -->
+            <div class="card" data-category="ciencia">
+                <img src="11.webp" alt="Museo de Ciencias Universum">
+                <h3>Museo Universum</h3>
+                <p>Un museo interactivo para aprender sobre las ciencias.</p>
+                <div class="toggle-button" onclick="toggleDetails(this)">Ver más</div>
+                <div class="details">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.452538467674!2d-99.17727724917695!3d19.348383250530004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fc22c5d70d7f%3A0xa703ea2ac54f223b!2sMuseo%20Universum!5e0!3m2!1ses-419!2ses!4v1635368792460!5m2!1ses-419!2ses" title="Museo Universum"></iframe>
+                    <div class="info">
+                        <p><strong>Horario:</strong> 9:00 - 18:00</p>
+                        <p><strong>Costos:</strong> Entrada general: $80 MXN, Entrada reducida: $40 MXN</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Continúa replicando el formato de tarjeta hasta completar los 20 museos... -->
+        
+        
+            </div>
+        
+            <script>
+                // Función para filtrar las tarjetas por categoría
+                function filterMuseums() {
+                    const searchTerm = document.getElementById('search-box').value.toLowerCase();
+                    const selectedCategory = document.getElementById('category-select').value;
+                    const cards = document.querySelectorAll('.card');
+                    
+                    cards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+                        const title = card.querySelector('h3').textContent.toLowerCase();
+                        
+                        // Filtramos las tarjetas por categoría y nombre de museo
+                        const matchesCategory = selectedCategory === 'all' || category === selectedCategory;
+                        const matchesSearch = title.includes(searchTerm);
+                        
+                        if (matchesCategory && matchesSearch) {
+                            card.style.display = 'block';  // Mostrar tarjeta
+                        } else {
+                            card.style.display = 'none';   // Ocultar tarjeta
+                        }
+                    });
+                }
+        
+                // Función para mostrar/ocultar los detalles del museo
+                function toggleDetails(button) {
+                    const details = button.parentElement.querySelector('.details');
+                    if (details.style.display === "none" || details.style.display === "") {
+                        details.style.display = "block";
+                        button.textContent = "Ver menos";
+                    } else {
+                        details.style.display = "none";
+                        button.textContent = "Ver más";
+                    }
+                }
+        
+                // Agregar eventos para filtrar cuando se cambie la categoría o se escriba en el campo de búsqueda
+                document.getElementById('category-select').addEventListener('change', filterMuseums);
+                document.getElementById('search-box').addEventListener('input', filterMuseums);
+        
+                // Inicializar mostrando todas las tarjetas al cargar la página
+                filterMuseums();
+            </script>
+        
+        </body>
+</html>

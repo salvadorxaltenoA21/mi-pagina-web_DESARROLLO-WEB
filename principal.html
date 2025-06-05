@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Guía de Museos</title>
+    <style>
+        /* Estilos generales para el cuerpo */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5dc; /* Fondo color crema */
+        }
+
+        /* Estilo para el encabezado */
+        .header {
+            background-color: #4CAF50; /* Color verde */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        /* Menú de navegación */
+        .nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Estilo para el contenido principal */
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Estilo para cada museo */
+        .museo {
+            background-color: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .museo h3 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        /* Estilo para los botones de acción */
+        .acciones {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .favorito {
+            background-color: transparent;
+            border: none;
+            color: #007BFF;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .favorito:hover {
+            color: #0056b3;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        /* Estilos para ocultar los museos según el filtro */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Mi Guía de Museos</h1>
+    </div>
+    
+    <div class="nav">
+        <a href="javascript:void(0);" onclick="mostrarMuseos('todos')">Todos</a>
+        <a href="javascript:void(0);" onclick="mostrarMuseos('visitados')">Visitados</a>
+        <a href="javascript:void(0);" onclick="mostrarMuseos('favoritos')">Favoritos</a>
+    </div>
+
+    <div class="content">
+        <p>Bienvenido a la guía donde podrás encontrar los mejores museos para visitar.</p>
+        
+        <!-- Museo 1 -->
+        <div class="museo" id="museo1">
+            <h3>Museo Nacional de Antropología</h3>
+            <div class="acciones">
+                <label>
+                    <input type="checkbox" id="visitado1"> Marcado como visitado
+                </label>
+                <button id="favorito1" class="favorito">❤ Marcar como favorito</button>
+            </div>
+        </div>
+
+        <!-- Museo 2 -->
+        <div class="museo" id="museo2">
+            <h3>Museo Frida Kahlo</h3>
+            <div class="acciones">
+                <label>
+                    <input type="checkbox" id="visitado2"> Marcado como visitado
+                </label>
+                <button id="favorito2" class="favorito">❤ Marcar como favorito</button>
+            </div>
+        </div>
+
+        <!-- Museo 3 -->
+        <div class="museo" id="museo3">
+            <h3>Museo de Arte Moderno</h3>
+            <div class="acciones">
+                <label>
+                    <input type="checkbox" id="visitado3"> Marcado como visitado
+                </label>
+                <button id="favorito3" class="favorito">❤ Marcar como favorito</button>
+            </div>
+        </div>
+
+        <div class="museo" id="museo3">
+            <h3>Museo Tamayo</h3>
+            <div class="acciones">
+                <label>
+                    <input type="checkbox" id="visitado3"> Marcado como visitado
+                </label>
+                <button id="favorito3" class="favorito">❤ Marcar como favorito</button>
+            </div>
+        </div>
+
+        <div class="museo" id="museo3">
+            <h3>Museo Nacional de Arte</h3>
+            <div class="acciones">
+                <label>
+                    <input type="checkbox" id="visitado3"> Marcado como visitado
+                </label>
+                <button id="favorito3" class="favorito">❤ Marcar como favorito</button>
+            </div>
+        </div>
+
+            <div class="museo" id="museo3">
+            <h3>Museo Universitario Arte Contemporáneo</h3>
+            <div class="acciones">
+                <label>
+                    <input type="checkbox" id="visitado3"> Marcado como visitado
+                </label>
+                <button id="favorito3" class="favorito">❤ Marcar como favorito</button>
+            </div>
+        </div>
+
+        <div class="museo" id="museo3">
+            <h3>Museo del Templo Mayor</h3>
+            <div class="acciones">
+                <label>
+                    <input type="checkbox" id="visitado3"> Marcado como visitado
+                </label>
+                <button id="favorito3" class="favorito">❤ Marcar como favorito</button>
+            </div>
+        </div>
+
+        <div class="museo" id="museo3">
+            <h3>Museo de Historia Natural</h3>
+            <div class="acciones">
+                <label>
+                    <input type="checkbox" id="visitado3"> Marcado como visitado
+                </label>
+                <button id="favorito3" class="favorito">❤ Marcar como favorito</button>
+            </div>
+        </div>
+
+        <div class="museo" id="museo3">
+            <h3>Museo de la Ciudad de México</h3>
+            <div class="acciones">
+                <label>
+                    <input type="checkbox" id="visitado3"> Marcado como visitado
+                </label>
+                <button id="favorito3" class="favorito">❤ Marcar como favorito</button>
+            </div>
+        </div>
+
+        <div class="museo" id="museo3">
+            <h3>Museo de la Ciudad de México</h3>
+            <div class="acciones">
+                <label>
+                    <input type="checkbox" id="visitado3"> Marcado como visitado
+                </label>
+                <button id="favorito3" class="favorito">❤ Marcar como favorito</button>
+            </div>
+        </div>
+
+        <div class="museo" id="museo3">
+            <h3>Museo Universum</h3>
+            <div class="acciones">
+                <label>
+                    <input type="checkbox" id="visitado3"> Marcado como visitado
+                </label>
+                <button id="favorito3" class="favorito">❤ Marcar como favorito</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+        // Funcionalidad para marcar como favorito
+        document.querySelectorAll('.favorito').forEach(function(button) {
+            button.addEventListener('click', function() {
+                if (this.style.color === 'red') {
+                    this.style.color = ''; // Cambiar de rojo a gris
+                    this.textContent = '❤ Marcar como favorito';
+                } else {
+                    this.style.color = 'red'; // Cambiar a rojo si es favorito
+                    this.textContent = '❤️ Favorito';
+                }
+            });
+        });
+
+        // Función para mostrar u ocultar museos según el filtro
+        function mostrarMuseos(filtro) {
+            // Obtener todos los museos
+            const museos = document.querySelectorAll('.museo');
+            
+            // Recorremos todos los museos y los mostramos u ocultamos según el filtro
+            museos.forEach(function(museo) {
+                const visitado = museo.querySelector('input[type="checkbox"]').checked;
+                const favorito = museo.querySelector('.favorito').style.color === 'red';
+
+                if (filtro === 'todos') {
+                    museo.classList.remove('hidden');
+                } else if (filtro === 'visitados' && visitado) {
+                    museo.classList.remove('hidden');
+                } else if (filtro === 'favoritos' && favorito) {
+                    museo.classList.remove('hidden');
+                } else {
+                    museo.classList.add('hidden');
+                }
+            });
+        }
+
+        // Inicializar mostrando todos los museos
+        mostrarMuseos('todos');
+    </script>
+</body>
+</html>
