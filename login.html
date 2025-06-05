@@ -21,23 +21,24 @@
         <p id="error-message" style="color: red; display: none;">Usuario o contraseña incorrectos</p>
     </div>
 
-    <script>
-        function validarLogin() {
-            // Obtener los valores de usuario y contraseña
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
 
-            // Verificar si coinciden con los valores predefinidos
-            if (username === "monica" && password === "123") {
-                // Si las credenciales son correctas, redirigir a la página principal
-                window.location.href = "principal.html"; // Cambia el enlace de acuerdo a la página de destino
-                return false; // Prevenir el comportamiento por defecto del formulario
+    <script>
+        const usuariosValidos = ["monica", "salvador", "eros"];
+        const contrasenaCorrecta = "123";
+
+        document.getElementById("loginForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const username = document.getElementById("username").value.trim().toLowerCase();
+            const password = document.getElementById("password").value.trim();
+            const errorMessage = document.getElementById("error-message");
+
+            if (usuariosValidos.includes(username) && password === contrasenaCorrecta) {
+                window.location.href = "principal.html";
             } else {
-                // Si las credenciales no son correctas, mostrar un mensaje de error
-                document.getElementById("error-message").style.display = "block";
-                return false; // Prevenir el comportamiento por defecto del formulario
+                errorMessage.style.display = "block";
             }
-        }
+        });
     </script>
 
 <!DOCTYPE html>
@@ -171,4 +172,3 @@
 
 </body>
 </html>
-
